@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="payment_acquirer_form_hesabe" model="ir.ui.view">
+        <field name="name">payment.acquirer.form.inherit</field>
+        <field name="model">payment.acquirer</field>
+        <field name="inherit_id" ref="payment.acquirer_form"/>
+        <field name="arch" type="xml">
+            <xpath expr='//group[@name="acquirer"]' position='inside'>
+                <group attrs="{'invisible': [('provider', 'not in', ('hesabe_knet','hesabe_mpgs'))]}">
+                    <field name="merchant_code" string='Merchant Code' attrs="{'required': [('provider', 'in', ('hesabe_knet','hesabe_mpgs'))]}"/>
+                    <field name="access_code" string='Access Code' attrs="{'required': [('provider', 'in', ('hesabe_knet','hesabe_mpgs'))]}"/>
+                    <field name="secret_key" string='Secret Key' attrs="{'required': [('provider', 'in', ('hesabe_knet','hesabe_mpgs'))]}"/>
+                    <field name="iv_key" string='IV Key' attrs="{'required': [('provider', 'in', ('hesabe_knet','hesabe_mpgs'))]}"/>
+                    <field name="api_version" string='API Version' attrs="{'required': [('provider', 'in', ('hesabe_knet','hesabe_mpgs'))]}"/>
+                    <field name="production_url" string='Production API URL' attrs="{'required': [('provider', 'in', ('hesabe_knet','hesabe_mpgs'))]}"/>
+                    <field name="sandbox_url" string='Sandbox API URL' attrs="{'required': [('provider', 'in', ('hesabe_knet','hesabe_mpgs'))]}"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="hesabe_knet_form">
+        <input type="hidden" name="data_set" t-att-data-action-url="tx_url" data-remove-me=""/>
+        <input type="hidden" name="form_url" t-att-value="form_url"/>
+    </template>
+    <template id="hesabe_mpgs_form">
+        <input type="hidden" name="data_set" t-att-data-action-url="tx_url" data-remove-me=""/>
+        <input type="hidden" name="form_url" t-att-value="form_url"/>
+    </template>
+</odoo>

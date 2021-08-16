@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="payment_acquirer_hesabe_knet" model="payment.acquirer">
+            <field name="name">Hesabe KNET</field>
+            <field name="image_128" type="base64" file="payment_hesabe/static/src/img/hesabe_icon.png"/>
+            <field name="provider">hesabe_knet</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="view_template_id" ref="hesabe_knet_form"/>
+            <field name="state">test</field>
+            <field name="pre_msg"><![CDATA[
+                <p>You will be redirected to the Hesabe Knet website after clicking on the payment button.</p>]]>
+            </field>
+            <field name="merchant_code">dummy</field>
+            <field name="access_code">dummy</field>
+            <field name="secret_key">dummy</field>
+            <field name="iv_key">dummy</field>
+            <field name="api_version">2.0</field>
+            <field name="production_url">https://api.hesabe.com</field>
+            <field name="sandbox_url">https://sandbox.hesabe.com</field>
+        </record>
+        <record id="payment_acquirer_hesabe_mpgs" model="payment.acquirer">
+            <field name="name">Hesabe MPGS</field>
+            <field name="image_128" type="base64" file="payment_hesabe/static/src/img/hesabe_icon.png"/>
+            <field name="provider">hesabe_mpgs</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="view_template_id" ref="hesabe_mpgs_form"/>
+            <field name="state">test</field>
+            <field name="pre_msg"><![CDATA[
+                <p>You will be redirected to the Hesabe MPGS website after clicking on the payment button.</p>]]>
+            </field>
+            <field name="merchant_code">dummy</field>
+            <field name="access_code">dummy</field>
+            <field name="secret_key">dummy</field>
+            <field name="iv_key">dummy</field>
+            <field name="api_version">2.0</field>
+            <field name="production_url">https://api.hesabe.com</field>
+            <field name="sandbox_url">https://sandbox.hesabe.com</field>
+        </record>
+    </data>
+</odoo>
